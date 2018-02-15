@@ -1,0 +1,13 @@
+# Datasource configuration
+spring:
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/ArticleMG
+    username: postgres
+    password: 123456
+  thymeleaf:
+    cache: false
+    mode: LEGACYHTML5
+server:
+     port: 8080
+     

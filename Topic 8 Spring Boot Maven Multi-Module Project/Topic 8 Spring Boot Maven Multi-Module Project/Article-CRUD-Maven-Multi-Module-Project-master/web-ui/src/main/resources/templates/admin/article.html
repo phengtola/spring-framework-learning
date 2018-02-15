@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  layout:decorator="/admin/layout">
+<head>
+<meta charset="UTF-8">
+<title>Category</title>
+
+
+</head>
+<body>
+
+<div layout:fragment="content">
+
+ <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        Articles
+        <small></small>
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="/admin"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li class="active">Article</li>
+      </ol>
+    </section>
+    
+    
+    <section class="content">
+    
+    <div class="row col-md-12">
+    	
+    	<div class="box">
+    		<div class="box-header with-border">
+             <a href="#" class="btn btn-success btn-sm" id="btAdd"><i class="fa fa-fw fa-plus-square-o"></i> Add More</a>
+        </div>
+    
+    		<div class="box-body">
+    		
+              <table class="table table-bordered">
+                <thead>
+                		<tr>
+	                  <th>#</th>
+	                  <th>Title</th>
+	                  <th>Content</th>
+	                  <th>Category</th>
+	                  <th>User</th>
+	                  <th>Images</th>
+	                  <th>Tags</th>
+	                  <th>Created Date</th>
+	                  <th>Index</th>
+	                  <th>Remark</th>
+	                  <th>Status</th>
+	                  <th>Action</th> 
+	                </tr>
+                </thead>
+                <tbody id="articleData">
+                		<!-- <tr>
+                			<td></td>
+                			<td></td>
+                		</tr>
+                		<tr>
+                			<td></td>
+                			<td></td>
+                		</tr>
+                		<tr>
+                			<td></td>
+                			<td></td>
+                		</tr> -->
+                
+                
+             	</tbody>
+              </table>
+              
+              <div id="pagination" class="pull-right">
+              
+              </div>
+              
+            </div>
+            
+           </div> 
+    		</div>
+    		
+    		
+    			<!-- <tr>
+				{{= title }}
+			</tr> -->
+    		<script type="text/x-jquery-tmpl" id="article_tmpl">
+    			
+			{{each(i, article) articles}}
+    			<tr>
+                    <td>${i+1}</td>
+                    <td>${article.title}</td>
+                    <td>${content.substring(1,20)}</td>
+                    <td><a href="#" class="btn btn-xs btn-default">${category.name}</a></td>
+                    <td>${user.username}</td>
+                    <td>Images</td>
+                    <td>
+                        {{each(i,tag) tags }}
+                            <a href="#" class="btn btn-xs btn-info">${tag.name}</a>
+                        {{/each}}
+                    </td>
+                    <td>${moment(created_date).format("DD-MM-YYYY HH:mm:ss")}</td>
+                    <td>${index}</td>
+                    <td>${remark}</td>
+                    <td>
+                        {{if status=='1'}}
+                        <button type="button" id="btUpdateStatus" data-uuid="${uuid}" data-status="0" class="btn btn-xs btn-success"><i class="fa fa-fw fa-check"></i></button>
+                        {{else}}
+                        <button type="button" id="btUpdateStatus" data-uuid="${uuid}" data-status="1" class="btn btn-xs btn-danger"><i class="fa fa-fw fa-times"></i></button>
+                        {{/if}}
+                    </td>
+                    <td>
+                        <a th:href="@{#view}" id="btDetail" data-uuid="${uuid}"> <i class="fa fa-eye"></i> </a>
+                        <a th:href="@{#edit}" id="btEdit" data-uuid="${uuid}"> <i class="fa fa-pencil-square-o"></i></a>
+                        <a th:href="@{#delete}" data-uuid="${uuid}"  id="btDelete"><i class="fa fa-trash-o"></i></a>
+                    </td>
+			    </tr>
+    			{{/each}}
+    		</script>
+    					
+    </section>
+    
+    
+    </div>
+</div>
+
+
+
+<th:block layout:fragment="script">
+ 	<script th:src="@{/resources/my-article/js/article.js}"></script>
+</th:block>
+
+	
+
+</body>
+</html>

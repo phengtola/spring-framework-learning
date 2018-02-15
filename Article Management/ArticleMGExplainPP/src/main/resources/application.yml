@@ -1,0 +1,9 @@
+# Datasource configuration
+spring:
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://110.74.194.123:5432/ARTICLE_MG
+    username: test
+    password: test
+server:
+     port: 8080

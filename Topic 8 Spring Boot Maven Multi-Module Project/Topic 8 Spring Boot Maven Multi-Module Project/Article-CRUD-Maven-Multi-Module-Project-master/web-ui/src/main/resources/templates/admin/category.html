@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  layout:decorator="/admin/layout">
+<head>
+<meta charset="UTF-8">
+<title>Category</title>
+
+
+</head>
+<body>
+
+<div layout:fragment="content">
+
+ <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        Categories
+        <small></small>
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="/admin"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li class="active">Category</li>
+      </ol>
+    </section>
+    
+    
+    <section class="content">
+    
+    <div class="row col-md-12">
+    	
+    	<div class="box">
+    		<div class="box-header with-border">
+             <a href="#" class="btn btn-success btn-sm" id="btAdd"><i class="fa fa-fw fa-plus-square-o"></i> Add More</a>
+        </div>
+    
+    		<div class="box-body">
+    		
+              <table class="table table-bordered">
+                 <thead>
+	                <tr>
+	                  <th>#</th>
+	                  <th>Name</th>
+	                  <th>Created Date</th>
+	                  <th>Articles</th>
+	                  <th>Index</th>
+	                   <th>Remark</th>
+	                  <th>Status</th>
+	                  <th>Action</th>
+	                </tr>
+				 </thead>
+				  <tbody id="categoryData">
+
+
+
+
+             	 </tbody>
+              </table>
+            </div>
+            
+           </div> 
+    		</div>
+    		
+    		
+    		
+    		<!-- Category Detail Modal  -->
+			<div class="modal fade" id="categoryDetailModal">
+		          <div class="modal-dialog">
+		            <div class="modal-content">
+		              <div class="modal-header">
+		                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		                  <span aria-hidden="true">&times;</span></button>
+		                <h4 class="modal-title">Category Detail</h4>
+		              </div>
+		              <div class="modal-body">
+		               
+		               
+		               		<div class="table-responsive">
+					            <table class="table">
+					              <tbody><tr>
+					                <th style="width:50%">Name:</th>
+					                <td id="name"> </td>
+					              </tr>
+					              <tr>
+					                <th>Created Date:</th>
+					                <td id="createdDate"> </td>
+					              </tr>
+					              <tr>
+					                <th>Total Article:</th>
+					                <td id="articleCount"> </td>
+					              </tr>
+					              <tr>
+					                <th>Status:</th>
+					                <td id="status"> </td>
+					              </tr>
+					               <tr>
+					                <th>Index:</th>
+					                <td id="index"> </td>
+					              </tr>
+					              <tr>
+					                <th>Remark:</th>
+					                <td id="remark"> </td>
+					              </tr>
+					            </tbody></table>
+					         </div>
+		              </div>
+		              <div class="modal-footer">
+		                <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+		                <button type="button" class="btn btn-primary">Edit</button>
+		              </div>
+		            </div>
+		            <!-- /.modal-content -->
+		          </div>
+		          <!-- /.modal-dialog -->
+		        </div>
+		        <!-- /.modal -->
+    		
+    		
+    		
+    			<!-- Category Update Modal  -->
+				<div class="modal fade" id="categoryEditModal">
+			         
+			         <!-- form start -->
+					<form class="form-horizontal" id="categoryUpdateForm" action="#" method="PUI">
+			         
+			          <div class="modal-dialog">
+			            <div class="modal-content">
+			              
+			              <div class="modal-header">
+			                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			                  <span aria-hidden="true">&times;</span></button>
+			                <h4 class="modal-title">Update Category </h4>
+			              </div>
+			              
+			              <div class="modal-body">
+			               
+						            <!-- /.box-header -->
+						           
+						              <div class="box-body">
+						                
+						                
+						                <div class="form-group">
+						                  <label for="inputEmail3" class="col-sm-2 control-label">UUID</label>
+						                  <div class="col-sm-10">
+						                    <input type="text" class="form-control" id="uuid" placeholder="UUID">
+						                  </div>
+						                </div>
+						                
+						                <div class="form-group">
+						                  <label for="inputEmail3" class="col-sm-2 control-label">Name</label>
+						                  <div class="col-sm-10">
+						                    <input type="text" class="form-control" id="name" placeholder="Name">
+						                  </div>
+						                </div>
+						                
+						                <div class="form-group">
+						                  <label for="inputPassword3" class="col-sm-2 control-label">Remark</label>
+						                  <div class="col-sm-10">
+						                    <input type="text" class="form-control" id="remark" placeholder="Remark">
+						                  </div>
+						                </div>
+						                
+						                 <div class="form-group">
+						                  <label for="inputPassword3" class="col-sm-2 control-label">Index</label>
+						                  <div class="col-sm-10">
+						                    <input type="text" class="form-control" id="index" placeholder="Index">
+						                  </div>
+						                </div>
+						                
+						                <div class="form-group">
+						                  <label for="inputPassword3" class="col-sm-2 control-label">Status</label>
+						                  <div class="col-sm-10">
+						                    <input type="text" class="form-control" id="status" placeholder="1">
+						                  </div>
+						                </div>
+						                
+						                
+						              </div>
+						              <!-- /.box-body -->
+						            
+						          
+			              </div>
+			              <div class="modal-footer">
+			                <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+			                <button type="submit" class="btn btn-primary">Update</button>
+			              </div>
+			            </div>
+			            <!-- /.modal-content -->
+			          </div>
+			          <!-- /.modal-dialog -->
+			          
+			          </form>
+			          
+			        </div>
+			        <!-- /.modal -->
+    		
+    		
+    		
+    		
+    			<!-- Category Add Modal  -->
+				<div class="modal fade" id="categoryAddModal">
+				
+					<!-- form start -->
+					<form class="form-horizontal" id="categoryAddForm" action="#" method="POST">
+				
+			          <div class="modal-dialog">
+			            <div class="modal-content">
+			              
+			              <div class="modal-header">
+			                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			                  <span aria-hidden="true">&times;</span></button>
+			                <h4 class="modal-title">Add Category </h4>
+			              </div>
+			              
+			              <div class="modal-body">
+			               
+						            <!-- /.box-header -->
+						            
+						              <div class="box-body">
+						                
+						                
+						                <div class="form-group">
+						                  <label for="inputEmail3" class="col-sm-2 control-label">Name</label>
+						                  <div class="col-sm-10">
+						                    <input type="text" class="form-control" id="name" placeholder="Name">
+						                  </div>
+						                </div>
+						                
+						                <div class="form-group">
+						                  <label for="inputPassword3" class="col-sm-2 control-label">Remark</label>
+						                  <div class="col-sm-10">
+						                    <input type="text" class="form-control" id="remark" placeholder="Remark">
+						                  </div>
+						                </div>
+						               
+						                
+						                 <div class="form-group">
+						                  <label for="inputPassword3" class="col-sm-2 control-label">Status</label>
+						                  <div class="col-sm-10">
+						                    <input type="text" class="form-control" id="status" placeholder="Index">
+						                  </div>
+						                </div>
+						                
+						                
+						              </div>
+						              <!-- /.box-body -->
+						            
+						          
+			              </div>
+			              <div class="modal-footer">
+			                <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+			                <button type="submit" class="btn btn-primary">Add</button>
+			              </div>
+			            </div>
+			            <!-- /.modal-content -->
+			          </div>
+			          <!-- /.modal-dialog -->
+			          
+			          </form>
+			          
+			          
+			        </div>
+			        <!-- /.modal -->
+    		
+    		
+    		
+    		
+    		
+    		
+    		
+    </section>
+    
+    
+    </div>
+
+
+
+
+	<script type="text/x-jquery-tmpl" id="category_tmpl">
+ 					{{each(i, cate) categories}}
+ 					<tr>
+						<td>${i+1}</td>
+						<td>${cate.name}</td>
+						<td>${moment(created_date).format("DD-MM-YYYY HH:mm:ss")}</td>
+						<td>${cate.couont_article}</td>
+						<td>${cate.index}</td>
+						<td>${cate.remark}</td>
+
+						{{if cate.status=='1'}}
+
+						<td><button type="button" id="btUpdateStatus" data-uuid="${cate.uuid}" data-status="0" class="btn btn-xs btn-success"><i class="fa fa-fw fa-check"></i></button> </td>
+
+						{{else}}
+
+						<td><button type="button" id="btUpdateStatus" data-uuid="${cate.uuid}" data-status="1" class="btn btn-xs btn-danger"><i class="fa fa-fw fa-times"></i></button></td>
+
+						{{/if}}
+
+						<td>
+							<a th:href="@{#view}" id="btDetail" data-uuid="${cate.uuid}"> <i class="fa fa-eye"></i> </a>
+							<a th:href="@{#edit}" id="btEdit" data-uuid="${cate.uuid}"> <i class="fa fa-pencil-square-o"></i></a>
+							<a th:href="@{#delete}" data-uuid="${cate.uuid}"  id="btDelete"><i class="fa fa-trash-o"></i></a>
+						</td>
+					</tr>
+					{{/each}}
+			</script>
+
+
+
+
+
+
+</div>
+
+
+
+
+<th:block layout:fragment="script">
+ 	<script th:src="@{/resources/my-article/js/category.js}"></script>
+</th:block>
+
+	
+
+</body>
+</html>

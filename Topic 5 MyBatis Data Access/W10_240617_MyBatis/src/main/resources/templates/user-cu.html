@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>User</title>
+</head>
+<body>
+
+<h1>Users </h1>
+<h3><a th:href="@{/user}">Back</a></h3>
+
+<form th:action="${action} == 'add' ?  @{/user/create} : @{/user/update }" th:object="${user}" method="POST">
+	<table border="0">
+		<tr th:if="${action} == 'update'">
+			<td>UserHash</td>
+			<td><input readonly="readonly" th:field="*{userHash}"/></td>
+		</tr>
+		<tr>
+			<td>Username</td>
+			<td><input type="text" th:field="*{username}"/></td>
+		</tr>
+		<tr>
+			<td>Email</td>
+			<td><input type="text" th:field="*{email}"/></td>
+		</tr>
+		<tr>
+			<td>Password</td>
+			<td><input type="text" th:field="*{password}"/></td>
+		</tr>
+		<tr>
+			<td>Gender</td>
+			<td>
+				<select th:field="*{gender}">
+					<option value="M">Male</option>
+					<option value="F">Female</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="submit">
+				<input type="reset">
+			</td>
+		</tr>
+	</table>
+</form>
+
+
+</body>
+</html>

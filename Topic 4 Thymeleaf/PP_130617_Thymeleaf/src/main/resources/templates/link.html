@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Link URLs</title>
+</head>
+<body>
+
+<H1>Thymeleaf Lnik URLs</H1>
+
+<h1>Simple URL</h1>
+<p>Produce URL : 'http://localhost:8081/home'</p>
+<p> <a th:href="@{/home}">Home</a> </p>
+ 
+<h2>URL Path</h2>
+<p>Produce URL : 'http://localhost:8081/student/18/detail'</p>
+<p><a th:href="@{/student/{studentId}/detail/{score}
+				(studentId=${STUDENT_ID} , score=100)}">
+				Student Detail
+	</a>
+</p>
+
+
+<h2>URL Query</h2>
+<p>Produce URL : 'http://localhost:8081/student/?student-id=18'</p>
+<p><a th:href="@{/student
+(student-id=${STUDENT_ID} , score-id=200)}">Student Detail</a></p>
+
+<h2>URL Path & Query</h2>
+<p><a th:href="@{/school/{schoolId}/students
+	(schoolId=${SCHOOL_ID} , page=1, limit=20)}">List Student in School</a></p>
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org"
+	xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+<meta charset="EUC-KR">
+<title>Home</title>
+</head>
+<body>
+
+<h1>Home</h1>
+
+
+<ul>
+	<li><a th:href="@{/home}">Home</a></li>
+	<li><a th:href="@{/article}">Article</a></li>
+	<li><a th:href="@{/article/9ed8dd14-9cf1-40e0-a108-da80184ae1ad}">Article Detail</a></li>
+	
+	<li sec:authorize="isAnonymous()">
+		<a th:href="@{/login}">Login</a>
+	</li>
+	
+	<li sec:authorize="isAuthenticated()">
+		<a th:href="@{/logout}">Logout</a>
+<!-- 		<form th:action="@{/logout}" method="POST"> -->
+<!-- 			<input type="submit" value="Logout" /> -->
+<!-- 		</form> -->
+	</li>
+	
+</ul>
+
+
+<hr/>
+
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  layout:decorator="layout">
+<head>
+<meta charset="UTF-8"/>
+<title>Home</title>
+</head>
+<body>
+
+<div layout:fragment="content">
+
+<h1 th:text="#{home}"> </h1>
+<p>This is Home Page</p>
+
+</div>
+
+<th:block layout:fragment="script">
+	<script type="text/javascript">
+		console.log("Home");
+	</script>
+</th:block>
+
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Home</title>
+
+<link th:href="@{/resources/css/style.css}"  type="text/css" rel="stylesheet" />
+
+
+
+</head>
+<body>
+
+<h1>home - Page</h1>
+
+<h1>Simple Attribute</h1>
+<p th:text="${MESSAGE}"></p>
+<p th:utext="${MESSAGE}"></p>
+
+<h1>Object Attribute</h1>
+<p th:text="${STUDENT.id}"></p>
+<p th:text="${STUDENT.name}"></p>
+<p th:text="${STUDENT.gender}"></p>
+
+<h1>Selection Object</h1>
+<div th:object="${STUDENT}">
+	<p th:text="'ID: ' + *{id}"></p>
+	<p th:text="'Name: ' +*{name}"></p>
+	<p th:text="'Gender: ' +*{gender}"></p>
+</div>
+
+<h1>Condition Evaluation</h1>
+<span th:if="${STUDENT.gender} == 'M'">Male</span>
+<span th:unless="${STUDENT.gender} == 'M'">Female</span>
+
+<h1>Switch</h1>
+<div th:switch="${STUDENT.gender}">
+	<span th:case="M">Male</span>
+	<span th:case="F">Female</span>
+	<span th:case="*">Other</span>
+</div>
+
+<h1>Setting The value of any attribute</h1>
+<input th:value="Name"> -> <input th:attr="placeholder=@{Name}"> 
+<img th:src="@{/resources/logo.png}" th:alt="logo" th:title="logo"/>
+<img th:attr="src=@{resources/logo.png} , alt=logo , title=logo" />
+
+<h1>Iteration</h1>
+<table>
+	<tr>
+		<th>ID</th>
+		<th>Name</th>
+		<th>Gender</th>
+	</tr>
+	<tr th:each="STU  : ${STUDENTS}" th:class="${STUStat.odd} ? 'odd' : 'even'">
+		<td th:text="${STU.id}"></td>
+		<td th:text="${STU.name}"></td>
+		<td th:text="${STU.gender}"></td>
+	</tr>
+</table>
+
+
+<h3>Lazy Retrieval of data</h3>
+<ul>
+	<li th:each="STU : ${STUDENTS}" th:text="${STU.name}"></li>
+</ul>
+
+
+<h1>Inlining</h1>
+<div th:inline="text" th:remove="tag">
+<h3>Message [[${MESSAGE}]]</h3>
+</div>
+
+<script type="text/javascript" th:inline="javascript">
+
+   var message = [[${MESSAGE}]];
+   var student = [[${STUDENT}]];
+   var students = [[${STUDENTS}]];
+   console.log('message: ' + message);
+   console.log(student);
+   console.log(students);
+   
+</script>
+
+
+
+
+
+
+
+</body>
+</html>

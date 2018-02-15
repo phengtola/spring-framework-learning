@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Error 404</title>
+<!-- for-mobile-apps -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Modern Error Widget Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+
+<!-- //for-mobile-apps -->
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<!-- font-awesome icons -->
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all" /> 
+
+<!-- //font-awesome icons -->
+<link href="//fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+
+<style type="text/css">
+
+/*--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+--*/
+/* reset */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,dl,dt,dd,ol,nav ul,nav li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
+article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, section {display: block;}
+ol,ul{list-style:none;margin:0px;padding:0px;}
+blockquote,q{quotes:none;}
+blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}
+table{border-collapse:collapse;border-spacing:0;}
+/* start editing from here */
+a{text-decoration:none;}
+.txt-rt{text-align:right;}/* text align right */
+.txt-lt{text-align:left;}/* text align left */
+.txt-center{text-align:center;}/* text align center */
+.float-rt{float:right;}/* float right */
+.float-lt{float:left;}/* float left */
+.clear{clear:both;}/* clear float */
+.pos-relative{position:relative;}/* Position Relative */
+.pos-absolute{position:absolute;}/* Position Absolute */
+.vertical-base{	vertical-align:baseline;}/* vertical align baseline */
+.vertical-top{	vertical-align:top;}/* vertical align top */
+nav.vertical ul li{	display:block;}/* vertical menu */
+nav.horizontal ul li{	display: inline-block;}/* horizontal menu */
+img{max-width:100%;}
+/*end reset*/
+html, body{
+    font-size: 100%;
+    background:#0f6d84;
+	font-family: 'Nunito', sans-serif;
+}
+h1,h2,h3,h4,h5,h6,input,p,a,select{
+	font-family: 'Nunito', sans-serif;
+	margin:0;
+}
+ul,label{
+	margin:0;
+	padding:0;
+}
+body a:hover,body a{
+	text-decoration:none;
+}
+/*-- main --*/
+.agileits_copyright{
+	text-align: center;
+}
+.agileits_copyright p{
+	font-size: 14px;
+    color: #fff;
+    margin: 3em 0 0;
+    line-height: 1.8em;
+    padding: 0 1em;
+    text-transform: capitalize;
+}
+.agileits_copyright p a{
+	color:#fff;
+	text-decoration:underline;
+}
+.agileits_copyright p a:hover{
+	color:#fff;
+	text-decoration:none;
+}
+input[type="submit"],.agileits_copyright p a,input[type="reset"],.agileinfo_social li a{
+	transition:.5s ease-in;
+	-webkit-transition:.5s ease-in;
+	-moz-transition:.5s ease-in;
+	-o-transition:.5s ease-in;
+	-ms-transition:.5s ease-in;
+}
+.main{
+	padding:4em 0;
+}
+.main h1{
+	text-align: center;
+    color:#fff;
+    font-size: 3em;
+    margin-bottom: 1em;
+	font-weight: 600;
+	text-transform:uppercase;
+}
+.w3layouts_main_grids{
+	width:60%;
+	padding:2em 2em 3em;
+	background:#fff;
+	margin:0 auto;
+}
+.w3_main_grid_left{
+	float: left;
+    width: 45%;
+    padding-right: 3em;
+    border-right: 1px solid #999;
+}
+.w3_main_grid_right{
+	float:right;
+    width: 44%;
+    padding-left: 3em;
+	margin: 5em 0 0;
+}
+.w3_main_grid_left h2{
+	font-size: 10em;
+    color: #0f6d84;
+    text-align: right;
+    font-weight: bold;
+    text-shadow: 0px 5px 1px #514F4F;
+	position:relative;
+}
+.w3_main_grid_left h3 {
+    font-size:2em;
+    color:#FC3A0F;
+    text-transform: capitalize;
+    text-align: right;
+	font-family: 'Open Sans', sans-serif;
+}
+.w3_main_grid_left h2:before{
+	content: '';
+    width: 130px;
+    height: 127px;
+    background: url(../images/1.png) no-repeat 0px 0px;
+    display: block;
+    position: absolute;
+    left: 4%;
+    top: 38%;
+}
+.w3l_main_grid{
+    position: relative;
+}
+.w3ls_form{
+    margin: 2em 0 0;
+}
+.w3ls_form input[type="text"]{
+	outline:none;
+	border:1px solid #999;
+	background:#fff;
+	padding:10px;
+	color:#999;
+	font-size:14px;
+	width:72%;
+}
+.w3ls_form input[type="submit"]{
+	outline: none;
+    border: 1px solid #0AADB6;
+    background: #1FD7E1;
+    padding: 10px 0;
+    color: #fff;
+    font-size: 14px;
+    width: 20%;
+    cursor: pointer;
+}
+.w3ls_form input[type="submit"]:hover{
+	background:#89E8ED;
+	color:#212121;
+}
+.w3_main_grid_right h3{
+	font-size: 1.3em;
+    line-height: 1.5em;
+    text-transform: capitalize;
+    color: #212121;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+}
+.w3_main_grid_right p{
+	color:#999;
+	line-height:2em;
+	margin:1em 0 2em;
+	font-size:14px;
+	font-family: 'Open Sans', sans-serif;
+}
+.agileits_main_grid_left{
+	float:left;
+}
+.agileits_main_grid_left h4{
+	font-size: 14px;
+    text-transform: uppercase;
+    color: #212121;
+    margin: .5em 0 0;
+}
+.agileits_main_grid_right{
+	float:left;
+	margin-left:2em;
+}
+.agileits_main_grid_right ul li{
+	display:inline-block;
+}
+.agileits_main_grid_right ul li a{
+	width: 30px;
+    height: 30px;
+    border-radius: 20px;
+    text-align: center;
+    display: block;
+    position: relative;
+}
+.agileits_main_grid_right ul li a i{
+	font-size: 12px;
+    color: #fff;
+    padding-top: .8em;
+}
+/*-- w3layouts --*/
+a.wthree_facebook{
+	background-color:#3b5998;
+}
+a.agile_twitter{
+	background-color:#1da1f2;
+}
+a.w3_agile_instagram{
+	background-color:#e1306c;
+}
+a.agileits_w3layouts_p{
+	background-color:#00a0dc;
+}
+a.wthree_facebook:hover{
+	background-color:#5C7AB8;
+}
+a.agile_twitter:hover{
+	background-color:#7CAFCE;
+}
+a.w3_agile_instagram:hover{
+	background-color:#E57299;
+}
+a.agileits_w3layouts_p:hover{
+	background-color:#73CCED;
+}
+/*-- start-responsive-design --*/
+@media (max-width:1440px){
+	.w3layouts_main_grids {
+		width: 65%;
+	}
+}
+@media (max-width: 1366px){
+	.w3layouts_main_grids {
+		width: 66%;
+	}
+}
+@media (max-width: 1280px){
+	.w3layouts_main_grids {
+		width: 71%;
+	}
+	.w3_main_grid_left h2:before {
+		left: 0%;
+	}
+}
+@media (max-width: 1080px){
+	.w3layouts_main_grids {
+		width: 85%;
+	}
+}
+@media (max-width: 1024px){
+/*-- agileits --*/
+	.main h1 {
+		font-size: 2.5em;
+	}
+	.w3_main_grid_left h2 {
+		font-size: 9.5em;
+	}
+	.w3_main_grid_left h2:before {
+		width: 110px;
+		height: 105px;
+		background: url(../images/1.png) no-repeat 0px 0px;
+		background-size: 100%;
+	}
+	.w3_main_grid_left h3 {
+		font-size: 1.7em;
+	}
+	.w3_main_grid_right h3 {
+		font-size: 1.2em;
+	}
+	.w3_main_grid_left {
+		width: 44%;
+	}
+	.w3_main_grid_right {
+		margin: 4.5em 0 0;
+	}
+}
+@media (max-width: 800px){
+	.w3_main_grid_left {
+		padding-right: 2em;
+	}
+	.w3_main_grid_left h2:before {
+		width: 80px;
+		height: 77px;
+		background: url(../images/1.png) no-repeat 0px 0px;
+		background-size: 100%;
+	}
+	.w3_main_grid_left h3 {
+		font-size: 1.5em;
+	}
+	.w3_main_grid_right {
+		padding-left: 2em;
+	}
+	.w3ls_form input[type="text"] {
+		width: 69%;
+	}
+	.w3ls_form input[type="submit"] {
+		width: 22%;
+	}
+	.w3_main_grid_right {
+		margin:1.5em 0 0;
+	}
+/*-- w3layouts --*/
+	.w3_main_grid_left h2 {
+		font-size: 7.5em;
+	}
+	.w3_main_grid_right {
+		width: 46%;
+	}
+}
+@media (max-width: 768px){
+	.w3ls_form input[type="text"] {
+		width: 68%;
+	}
+	.w3_main_grid_right {
+		margin: 1.5em 0 0;
+	}
+}
+@media (max-width: 736px){
+	.w3_main_grid_left h3 {
+		font-size: 1.3em;
+	}
+	.w3_main_grid_right h3 {
+		font-size: 1em;
+	}
+	.agileits_main_grid_right {
+		margin-left: 1em;
+	}
+	.w3_main_grid_right {
+		margin: 0;
+		width: 45%;
+	}
+	.w3layouts_main_grids {
+		padding: 2em 2em 2.5em;
+	}
+	.main h1 {
+		font-size: 2.3em;
+	}
+	.main {
+		padding: 3em 0;
+	}
+}
+@media (max-width: 667px){
+	.w3_main_grid_right {
+		width: 44%;
+	}
+	.w3_main_grid_left h2:before {
+		width: 60px;
+		height: 58px;
+		background: url(../images/1.png) no-repeat 0px 0px;
+		background-size: 100%;
+/*-- agileits --*/
+	}
+	.w3_main_grid_left h2 {
+		font-size: 6.5em;
+	}
+	.w3ls_form input[type="text"] {
+		width: 91%;
+		margin-bottom:1em;
+	}
+	.w3ls_form input[type="submit"] {
+		width: 45%;
+	}
+	.agileits_main_grid_left {
+		float: none;
+		margin-bottom:1em;
+	}
+	.agileits_main_grid_right {
+		float: none;
+		margin:0;
+	}
+}
+@media (max-width: 600px){
+	.w3_main_grid_left {
+		float: none;
+		width: 100%;
+		border-right: none;
+		border-bottom: 1px solid #999;
+		padding: 0 0 2em;
+	}
+	.w3ls_form input[type="text"] {
+		width: 95.5%;
+	}
+	.w3_main_grid_right {
+		margin: 0;
+		float: none;
+		width: 100%;
+		padding: 2em 0 0;
+	}
+	.w3_main_grid_left h2 {
+		font-size: 7.5em;
+		text-align: center;
+	}
+	.w3_main_grid_left h3 {
+		text-align: center;
+	}
+	.w3_main_grid_left h2:before {
+		width: 90px;
+		height: 86px;
+		background: url(../images/1.png) no-repeat 0px 0px;
+		background-size: 100%;
+		left: 10%;
+	}
+}
+@media (max-width: 568px){
+	.w3_main_grid_left h2:before {
+		left: 8%;
+	}
+	.w3_main_grid_right p {
+		margin: 1em 0;
+	}
+}
+@media (max-width: 480px){
+	.w3layouts_main_grids {
+		padding: 1.5em 1.5em 2em;
+	}
+	.main h1 {
+		font-size: 2em;
+	}
+	.w3_main_grid_left h2:before {
+		left: 0%;
+	}
+	.agileits_copyright p {
+		margin: 2em 0 0;
+	}
+}
+@media (max-width: 414px){
+	.main h1 {
+		font-size: 1.8em;
+	}
+	.w3layouts_main_grids {
+		width: 80%;
+	}
+	.w3_main_grid_left h2:before {
+		width: 56px;
+		height: 54px;
+		top: 55%;
+	}
+	.w3ls_form input[type="text"] {
+		width: 92.5%;
+	}
+}
+@media (max-width: 384px){
+	.w3layouts_main_grids {
+		padding: 0em 1.5em 2em;
+	}
+	.main h1 {
+		font-size: 1.7em;
+	}
+	.main {
+		padding: 2em 0;
+	}
+	.w3_main_grid_left {
+		padding: 0 0 1.5em;
+	}
+	.w3_main_grid_right {
+		padding: 1.5em 0 0;
+	}
+}
+@media (max-width: 375px){
+	.main h1 {
+		font-size: 1.6em;
+	}
+	.w3_main_grid_left h2 {
+		font-size: 7em;
+	}
+	.w3_main_grid_left h3 {
+		font-size: 1.2em;
+	}
+	.w3ls_form input[type="text"] {
+		width: 91.5%;
+	}
+}
+@media (max-width: 320px){
+	.main h1 {
+		font-size: 1.4em;
+	}
+	.w3_main_grid_left h2 {
+		font-size: 5.5em;
+	}
+	.w3layouts_main_grids {
+		padding: 1em 1.3em 2em;
+	}
+	.w3ls_form input[type="text"] {
+		width: 90.5%;
+		font-size:13px;
+	}
+	.w3ls_form input[type="submit"] {
+		width: 100%;
+	}
+	.w3_main_grid_right p,.agileits_copyright p {
+		font-size: 13px;
+	}
+}
+</style>
+
+</head>
+<body>
+
+
+
+<body>
+
+
+	<div class="main">
+		<!---728x90--->
+		<h1>Error 404</h1>
+		<!---728x90--->
+		<div class="w3layouts_main_grids">
+			<div class="w3_main_grid_left">
+				<div class="w3l_main_grid">
+					<h2>404</h2>
+				</div>
+				<h3>Oops... page not found!</h3>	
+				<div class="w3ls_form">
+					<form action="#" method="post">
+						<input type="text" name="Keyword" placeholder="Enter your keyword here..." required="" />
+						<input type="submit" value="Search">
+					</form>
+				</div>
+			</div>
+			<div class="w3_main_grid_right w3_agileits_grid_right">
+				<h3> Title...............................</h3>
+				<p> Description.....................</p>
+				<div class="agileits_main_grid">
+					<div class="agileits_main_grid_left">
+						<h4>Follow Us On :</h4>
+					</div>
+					<div class="agileits_main_grid_right">
+						<ul class="agileinfo_social">
+							<li><a class="wthree_facebook" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+							<li><a class="agile_twitter" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+							<li><a class="w3_agile_instagram" href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+							<li><a class="agileits_w3layouts_p" href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+						</ul>
+					</div>
+					<div class="clear"> </div>
+				</div>
+			</div>
+			<div class="clear"> </div>
+		</div>
+<!---728x90--->
+		<div class="agileits_copyright">
+			<p> © 2017 KA. All Rights Reserved</p>
+		</div>
+	</div>
+</body>
+</html>

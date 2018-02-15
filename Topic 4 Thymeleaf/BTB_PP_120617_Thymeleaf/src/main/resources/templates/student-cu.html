@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8"/>
+<title>Student Form</title>
+</head>
+<body>
+
+
+<form th:action="@{/student-c}" th:object="${STUDENT}" th:method="POST">
+
+	<table>
+		<tr>
+			<td><label th:text="#{id}"></label></td>
+			<td><input th:field="*{id}"/></td>
+		</tr>
+		<tr>
+			<td><label th:text="#{name}">  </label></td>
+			<td><input th:field="*{name}" />
+		</tr>
+		<tr>
+			<td><label th:text="#{gender}"></label></td>
+			<td>
+				<select th:field="*{gender}">
+					<option value="M">Male</option>
+					<option value="F">Female</option>
+				</select>
+			</td	>
+		</tr>
+		<tr><td><input type="submit"/></td></tr>
+		
+	</table>
+
+</form>
+
+
+
+
+
+
+
+
+</body>
+</html>

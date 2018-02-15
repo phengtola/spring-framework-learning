@@ -1,0 +1,40 @@
+{
+	"title":"Tech and Elitist Design",
+	"content":"In the past few decades, income inequality in the United States has increased dramatically. Between 1979 and 2007, after-tax income of households in the top 1 percent of earners grew by 275%, compared to 65% for the next 19%, ~40% for the next 60%, and 18% for the bottom fifth of households.",
+	"status":"1",
+	"user":{
+		"id":1
+	},
+	"category":{
+		"id":3
+	},
+	"files":[
+		{
+			"name":"1.Tech and Elitist Design",
+			"path":"https://scontent.fpnh1-2.fna.fbcdn.net/v/t1.0-9/19601500_1631890416843686_1058219809182671926_n.png?oh=90620671649d7bdce26dec1cfac2e123&oe=59D401B2",
+			"size":8888,
+			"type":"file_image",
+			"extension" : "png"
+		},
+		{
+			"name":"2.Tech and Elitist Design",
+			"path":"https://scontent.fpnh1-2.fna.fbcdn.net/v/t1.0-9/19601500_1631890416843686_1058219809182671926_n.png?oh=90620671649d7bdce26dec1cfac2e123&oe=59D401B2",
+			"size":8888,
+			"type":"file_image"
+		},
+		{
+			"name":"3.Tech and Elitist Design",
+			"path":"https://scontent.fpnh1-2.fna.fbcdn.net/v/t1.0-9/19601500_1631890416843686_1058219809182671926_n.png?oh=90620671649d7bdce26dec1cfac2e123&oe=59D401B2",
+			"size":8888,
+			"type":"file_article_image"
+		}
+	],
+	"tags":[
+		{
+			"id":3
+		},
+		{
+			"id":4
+		}
+	]
+}

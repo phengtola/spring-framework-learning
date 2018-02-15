@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org"
+	xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+<meta charset="EUC-KR">
+<title>Article - Admin</title>
+</head>
+<body>
+
+<h1>Admin - Article</h1>
+
+
+<ul>
+	<li><a th:href="@{/admin/dashboard}">Admin Dashboard</a></li>
+	<li><a th:href="@{/admin/article}">Admin Article</a></li>
+	<li><a th:href="@{/admin/category}">Admin Category</a></li>
+	
+	<li sec:authorize="isAuthenticated()">
+		<a th:href="@{/logout}">Logout</a>
+	</li>
+	
+	
+</ul>
+
+</body>
+</html>

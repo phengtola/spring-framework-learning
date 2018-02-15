@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="web-ui:war">
+    <output-path>$PROJECT_DIR$/web-ui/target</output-path>
+    <root id="archive" name="web-ui-0.0.1-SNAPSHOT.war">
+      <element id="artifact" artifact-name="web-ui:war exploded" />
+    </root>
+  </artifact>
+</component>

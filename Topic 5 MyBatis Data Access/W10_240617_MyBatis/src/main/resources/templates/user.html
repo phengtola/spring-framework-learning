@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>User</title>
+</head>
+<body>
+
+<h1>Users </h1>
+<h3><a th:href="@{/user/add}">Add user</a></h3>
+
+<table border="1">
+	<tr>
+		<th>ID</th>
+		<th>Username</th>
+		<th>Email</th>
+		<th>Gender</th>
+		<th>Status</th>
+		<th>Action</th>
+	</tr>
+	<!-- Loop -->
+	<tr th:each="u : ${users}">
+		<td th:text=${u.id}> </td>
+		<td th:text="${u.username}"> </td>
+		<td th:text="${u.email}"> </td>
+		<td th:text="${u.gender}"> </td>
+		<td th:text="${u.status} == '0' ? false : true"> </td>
+		<td>
+			<a href="#">Detail</a> | 
+			<a th:href="@{user/delete/{userHash}(userHash=${u.userHash})}">Delete</a> |
+			<a th:href="@{/user/update/{user_hash}(user_hash=${u.userHash})}">Update</a>
+		</td>
+	</tr>
+	<!-- /End Loop -->
+</table>
+
+</body>
+</html>

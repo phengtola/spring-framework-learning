@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- Tell the browser to be responsive to screen width -->
+<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+<title layout:title-pattern="$CONTENT_TITLE - $DECORATOR_TITLE">KA Admin</title>
+
+<style th:replace="@{/shared/admin/_style}"></style>
+
+</head>
+<body class="skin-blue sidebar-mini wysihtml5-supported">
+
+	<div th:replace="@{/shared/admin/_header}"></div>
+
+	<div th:replace="@{/shared/admin/_left-side-bar}"></div>
+
+	<div layout:fragment="content" class="content-wrapper">
+	
+	</div>
+	
+	<div th:replace="@{/shared/admin/_footer}"></div>
+
+	<div th:replace="@{/shared/admin/_right-side-bar}"></div>
+
+	<div th:replace="@{/shared/admin/_script}"></div>
+
+</body>
+</html>

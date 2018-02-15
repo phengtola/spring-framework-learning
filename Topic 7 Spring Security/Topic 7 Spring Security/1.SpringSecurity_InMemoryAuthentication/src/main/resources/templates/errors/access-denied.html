@@ -1,0 +1,21 @@
+
+
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org"
+	xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+<meta charset="EUC-KR">
+<title>Error 403 - Access Denied Page</title>
+</head>
+<body>
+
+<h1>Error 403 - Access is denied</h1>
+<div th:inline="text">
+	Hello '[[${#httpServletRequest.remoteUser}]]', you don't have permission to 
+	access this page.
+</div>
+
+</body>
+</html>
+
+

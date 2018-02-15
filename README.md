@@ -76,7 +76,7 @@ You will Learn the most popular Java Framework to build dynamic and powerful Web
      - Configuration 
      - Mapper Annotation 
      
-**6. Spring RESTful Web Service 
+**6. Spring RESTful Web Service** 
    - Introduction to Web Service 
    - RESTful Web Service  
    - Web Service Developer Document with Swagger

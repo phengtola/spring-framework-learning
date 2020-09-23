@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="/admin/admin_layout">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Role</title>
+</head>
+<body>
+
+<div layout:fragment="content">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1>Add Role Form</h1>
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- left column -->
+                <div class="col-md-12">
+                    <!-- general form elements -->
+                    <div class="card card-primary">
+
+                        <!-- /.card-header -->
+                        <!-- form start -->
+                        <form role="form" id="addRoleForm" action="#" method="POST">
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <label>Role name</label>
+                                    <input type="text" class="form-control" id="roleName" placeholder="Role name">
+                                </div>
+                                <div class="form-group">
+                                    <label>Status</label>
+                                    <input type="number"  class="form-control" id="status" placeholder="status">
+                                </div>
+                                <div class="form-group">
+                                    <label>User Id</label>
+                                    <input type="number" class="form-control" id="userId" placeholder="userId">
+                                </div>
+                            </div>
+                            <!-- /.card-body -->
+
+                            <div class="card-footer">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- /.card -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+</div>
+
+<th:block layout:fragment="script">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="/admin/scripts/role-add.js"></script>
+
+</th:block>
+
+</body>
+</html>

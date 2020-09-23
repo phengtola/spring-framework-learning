@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="/admin/admin_layout">
+<head>
+    <meta charset="UTF-8">
+    <title>View Role</title>
+</head>
+<body>
+
+
+<div layout:fragment="content">
+
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                        <h1>View Role</h1>
+                    </div>
+                </div>
+            </div><!-- /.container-fluid -->
+        </section>
+
+        <!-- Main content -->
+        <section class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+
+
+                            <!-- /.card-header -->
+                            <div class="card-body">
+
+                                        <h3>ID: <span id="id"></span> </h3>
+                                        <h3>Role name: <span id="roleName"></span></h3>
+                                        <h3>Created Date: <span id="createdDate"></span></h3>
+                                        <h3>Status: <span id="status"></span></h3>
+                                        <h3>User ID: <span id="userId"></span></h3>
+
+                            </div>
+
+                        </div>
+                        <!-- /.card -->
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!-- Main content -->
+
+
+</div>
+
+
+<th:block layout:fragment="script">
+
+    <script type="text/javascript" th:inline="javascript">
+        var roleId = [[${role_id}]];
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="/admin/scripts/role-view.js"></script>
+
+
+</th:block>
+
+</body>
+</html>

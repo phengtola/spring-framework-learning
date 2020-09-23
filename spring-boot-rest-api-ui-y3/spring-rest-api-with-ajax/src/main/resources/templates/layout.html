@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.utraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <title layout:title-pattern="$CONTENT_TITLE - $DECORATOR_TITLE">ITAdventure</title>
+
+    <style th:replace="shared/style"></style>
+
+</head>
+<body>
+
+<div th:replace="shared/header">  </div>
+
+<div th:replace="shared/menu"> </div>
+
+<div layout:fragment="content"> </div>
+
+<div th:replace="shared/footer"></div>
+
+<div layout:fragment="script"> </div>
+
+<div th:replace="shared/file_script"> </div>
+
+</body>
+</html>
+
+
+
+
+
+
+

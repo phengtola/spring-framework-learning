@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="/admin/admin_layout">
+<head>
+    <meta charset="UTF-8">
+    <title>List Role</title>
+</head>
+<body>
+
+
+<div layout:fragment="content">
+
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                        <h1>List Roles</h1>
+                    </div>
+                </div>
+            </div><!-- /.container-fluid -->
+        </section>
+
+        <!-- Main content -->
+        <section class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+
+                            <div class="card-header">
+                                <a href="/admin/role/add">Add Role</a>
+                            </div>
+
+                            <!-- /.card-header -->
+                            <div class="card-body">
+                                <table class="table table-bordered">
+                                    <thead>
+                                    <tr>
+                                        <th style="width: 10px">ID</th>
+                                        <th>Role name</th>
+                                        <th>Created Date</th>
+                                        <th>Status</th>
+                                        <th>User ID</th>
+                                        <th>Action</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody id="roleTable">
+
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                        <!-- /.card -->
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!-- Main content -->
+
+
+</div>
+
+
+<th:block layout:fragment="script">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="/admin/scripts/role-list.js"></script>
+
+
+</th:block>
+
+</body>
+</html>
